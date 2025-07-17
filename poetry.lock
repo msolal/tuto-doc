@@ -2110,34 +2110,6 @@ theme-rtd = ["sphinx-rtd-theme (>=2.0,<3.0)"]
 theme-sbt = ["sphinx-book-theme (>=1.1,<2.0)"]
 
 [[package]]
-<<<<<<< HEAD
-name = "sphinx-gallery"
-version = "0.19.0"
-description = "A Sphinx extension that builds an HTML gallery of examples from any set of Python scripts."
-optional = false
-python-versions = ">=3.8"
-groups = ["docs"]
-files = [
-    {file = "sphinx_gallery-0.19.0-py3-none-any.whl", hash = "sha256:4c28751973f81769d5bbbf5e4ebaa0dc49dff8c48eb7f11131eb5f6e4aa25f0e"},
-    {file = "sphinx_gallery-0.19.0.tar.gz", hash = "sha256:8400cb5240ad642e28a612fdba0667f725d0505a9be0222d0243de60e8af2eb3"},
-]
-
-[package.dependencies]
-pillow = "*"
-sphinx = ">=5"
-
-[package.extras]
-animations = ["sphinxcontrib-video"]
-dev = ["absl-py", "graphviz", "intersphinx-registry", "ipython", "joblib", "jupyterlite-sphinx (>=0.17.1)", "lxml", "matplotlib", "numpy", "packaging", "plotly", "pydata-sphinx-theme", "pytest", "pytest-coverage", "seaborn", "sphinxcontrib-video", "statsmodels"]
-jupyterlite = ["jupyterlite-sphinx"]
-parallel = ["joblib"]
-recommender = ["numpy"]
-show-api-usage = ["graphviz"]
-show-memory = ["memory-profiler"]
-
-[[package]]
-=======
->>>>>>> tutorial
 name = "sphinxcontrib-applehelp"
 version = "2.0.0"
 description = "sphinxcontrib-applehelp is a Sphinx extension which outputs Apple help books"
@@ -2155,30 +2127,6 @@ standalone = ["Sphinx (>=5)"]
 test = ["pytest"]
 
 [[package]]
-<<<<<<< HEAD
-name = "sphinxcontrib-bibtex"
-version = "2.6.5"
-description = "Sphinx extension for BibTeX style citations."
-optional = false
-python-versions = ">=3.9"
-groups = ["docs"]
-files = [
-    {file = "sphinxcontrib_bibtex-2.6.5-py3-none-any.whl", hash = "sha256:455ea4509642ea0b28ede3721550273626f85af65af01f161bfd8e19dc1edd7d"},
-    {file = "sphinxcontrib_bibtex-2.6.5.tar.gz", hash = "sha256:9b3224dd6fece9268ebd8c905dc0a83ff2f6c54148a9235fe70e9d1e9ff149c0"},
-]
-
-[package.dependencies]
-docutils = ">=0.8,<0.18.dev0 || >=0.20.dev0"
-pybtex = ">=0.25"
-pybtex-docutils = ">=1.0.0"
-Sphinx = ">=3.5"
-
-[package.extras]
-test = ["pytest", "pytest-cov", "sphinx-autoapi"]
-
-[[package]]
-=======
->>>>>>> tutorial
 name = "sphinxcontrib-devhelp"
 version = "2.0.0"
 description = "sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp documents"
@@ -2579,8 +2527,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<3.13"
-<<<<<<< HEAD
-content-hash = "27d5688544f8ca0175b6a18b5f7e2a558c7fd1da9b651eb26e3968a7ecb01e51"
-=======
 content-hash = "c18437840772165a20363373816ed0a44d10593fdc3d1d8ab0df56889b07ccc2"
->>>>>>> tutorial
