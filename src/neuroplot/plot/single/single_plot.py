@@ -28,11 +28,8 @@ class SinglePlot:
             Potential transforms to apply to the image before plotting. See :py:mod:`neuroplot.transforms`.
 
             .. important::
-    <<<<<<< HEAD
                 No matter the transforms passed, the image will first be reoriented to the :term:`RAS+` coordinate system.
-    =======
-                No matter the transforms passed, the image will first be reoriented to the **RAS+** coordinate system.
-    >>>>>>> tutorial
+
 
         figsize : tuple[float, float] | None, default=None
             The size of the figure. See :py:func:`matplotlib.pyplot.figure` for more details.
@@ -67,7 +64,6 @@ class SinglePlot:
         --------
         :py:class:`neuroplot.plot.multiple.MultiplePlot`
             To plot multiple neuroimages in a grid of subplots.
-    <<<<<<< HEAD
 
         References
         ----------
