@@ -23,9 +23,12 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx.ext.autosummary",
+<<<<<<< HEAD
     "sphinx.ext.extlinks",
     "sphinx_gallery.gen_gallery",
     "sphinxcontrib.bibtex",
+=======
+>>>>>>> tutorial
 ]
 
 templates_path = ["_templates"]
@@ -39,6 +42,7 @@ intersphinx_mapping = {
     "matplotlib": ("https://matplotlib.org/stable/", None),
 }
 
+<<<<<<< HEAD
 from pathlib import Path
 
 sphinx_gallery_conf = {
@@ -59,10 +63,18 @@ extlinks = {
     ),
 }
 
+=======
+>>>>>>> tutorial
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "furo"
+<<<<<<< HEAD
 html_title = "NeuroPlot"
 html_logo = "_static/logos/logo_ARAMISLAB_rvb.png"
 html_static_path = ["_static"]
+=======
+html_static_path = ["_static"]
+html_title = "NeuroPlot"
+html_logo = "_static/logos/logo_ARAMISLAB_rvb.png"
+>>>>>>> tutorial
