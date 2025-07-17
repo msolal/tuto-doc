@@ -6,18 +6,9 @@
 .. currentmodule:: neuroplot.transforms
 
 .. autosummary::
-<<<<<<< HEAD
-   :toctree: generated/
-   :nosignatures:
-   :template: autosummary/class.rst
-
-   Noise
-   RescaleIntensity
-=======
     :toctree: generated/
     :nosignatures:
     :template: autosummary/class.rst
 
     Noise
     RescaleIntensity
->>>>>>> tutorial

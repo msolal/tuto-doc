@@ -9,76 +9,71 @@ from matplotlib.figure import Figure
 
 class SinglePlot:
     """
-    To plot a single neuroimage.
+        To plot a single neuroimage.
 
-    2D slices will be plotted via the method :py:meth:`plot`. The user can choose which anatomical axes to plot,
-    and which slice to plot along the axes.
+        2D slices will be plotted via the method :py:meth:`plot`. The user can choose which anatomical axes to plot,
+        and which slice to plot along the axes.
 
-    The title of the figure can be changed between plots using :py:meth:`set_title`.
+        The title of the figure can be changed between plots using :py:meth:`set_title`.
 
-<<<<<<< HEAD
-    Just a random reference to :footcite:t:`Harris:2020`. And another to Matplotlib\\ :footcite:`Hunter:2007`.
+        Parameters
+        ----------
+        axes : int | Sequence[int] | None, default=None
+            The axis (or axes) to plot, among ``0`` (sagittal axis), ``1`` (coronal) or ``2`` (axial).
+            Can be passed as a single axis, or a list of axes. If ``None``, the three axes will be plotted.
+        slices : int | Sequence[int] | None, default=None
+            The slice to plot for each axis. If ``None``, the middle slice will be plotted. Otherwise, the **number
+            of slices passed must be equal to the number of plotted axes** (equal to :math:`3` if ``axes=None``).
+        transforms : Sequence[Callable[[np.ndarray], np.ndarray]] | None, default=None
+            Potential transforms to apply to the image before plotting. See :py:mod:`neuroplot.transforms`.
 
-=======
->>>>>>> tutorial
-    Parameters
-    ----------
-    axes : int | Sequence[int] | None, default=None
-        The axis (or axes) to plot, among ``0`` (sagittal axis), ``1`` (coronal) or ``2`` (axial).
-        Can be passed as a single axis, or a list of axes. If ``None``, the three axes will be plotted.
-    slices : int | Sequence[int] | None, default=None
-        The slice to plot for each axis. If ``None``, the middle slice will be plotted. Otherwise, the **number
-        of slices passed must be equal to the number of plotted axes** (equal to :math:`3` if ``axes=None``).
-    transforms : Sequence[Callable[[np.ndarray], np.ndarray]] | None, default=None
-        Potential transforms to apply to the image before plotting. See :py:mod:`neuroplot.transforms`.
+            .. important::
+    <<<<<<< HEAD
+                No matter the transforms passed, the image will first be reoriented to the :term:`RAS+` coordinate system.
+    =======
+                No matter the transforms passed, the image will first be reoriented to the **RAS+** coordinate system.
+    >>>>>>> tutorial
 
-        .. important::
-<<<<<<< HEAD
-            No matter the transforms passed, the image will first be reoriented to the :term:`RAS+` coordinate system.
-=======
-            No matter the transforms passed, the image will first be reoriented to the **RAS+** coordinate system.
->>>>>>> tutorial
+        figsize : tuple[float, float] | None, default=None
+            The size of the figure. See :py:func:`matplotlib.pyplot.figure` for more details.
+        title : str | None, default=None
+            A potential title for the figures that will be plotted.
 
-    figsize : tuple[float, float] | None, default=None
-        The size of the figure. See :py:func:`matplotlib.pyplot.figure` for more details.
-    title : str | None, default=None
-        A potential title for the figures that will be plotted.
+        Raises
+        ------
+        AssertionError
+            If the number of slices passed is not equal to the number of plotted axes.
 
-    Raises
-    ------
-    AssertionError
-        If the number of slices passed is not equal to the number of plotted axes.
+        Examples
+        --------
+        .. code-block:: python
 
-    Examples
-    --------
-    .. code-block:: python
+            from neuroplot.plot.single import SinglePlot
+            from neuroplot.transforms import RescaleIntensity
 
-        from neuroplot.plot.single import SinglePlot
-        from neuroplot.transforms import RescaleIntensity
+            plotter = SinglePlot(axes=[0, 2], slices=[55, 167], transforms=[RescaleIntensity()])
 
-        plotter = SinglePlot(axes=[0, 2], slices=[55, 167], transforms=[RescaleIntensity()])
+        .. code-block:: python
 
-    .. code-block:: python
+            >>> plotter.set_title("A first image")
+            >>> plotter.plot("data/example_1.nii.gz")
 
-        >>> plotter.set_title("A first image")
-        >>> plotter.plot("data/example_1.nii.gz")
+        .. code-block:: python
 
-    .. code-block:: python
+            >>> plotter.set_title("Another image")
+            >>> plotter.plot("data/example_2.nii.gz")
 
-        >>> plotter.set_title("Another image")
-        >>> plotter.plot("data/example_2.nii.gz")
+        See Also
+        --------
+        :py:class:`neuroplot.plot.multiple.MultiplePlot`
+            To plot multiple neuroimages in a grid of subplots.
+    <<<<<<< HEAD
 
-    See Also
-    --------
-    :py:class:`neuroplot.plot.multiple.MultiplePlot`
-        To plot multiple neuroimages in a grid of subplots.
-<<<<<<< HEAD
-
-    References
-    ----------
-    .. footbibliography::
-=======
->>>>>>> tutorial
+        References
+        ----------
+        .. footbibliography::
+    =======
+    >>>>>>> tutorial
     """
 
     def __init__(
