@@ -23,12 +23,9 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx.ext.autosummary",
-<<<<<<< HEAD
     "sphinx.ext.extlinks",
     "sphinx_gallery.gen_gallery",
     "sphinxcontrib.bibtex",
-=======
->>>>>>> tutorial
 ]
 
 templates_path = ["_templates"]
